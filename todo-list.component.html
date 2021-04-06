@@ -1,0 +1,18 @@
+<div class="container">   
+    <p>ToDoListComponent</p>
+    <app-task *ngFor="let task of tasks"[taskObj]="task"(deleteTask) = "deleteTask($event)"></app-task>
+
+    <div class="new-task">
+    
+        <b>Add task:</b>
+        <div class="name">
+            Name: <input type="text" [(ngModel)]="taskName">
+        </div>
+        <div>    
+            Description: <input type="text" [(ngModel)]="taskDescription">
+        </div>
+        <button class="button" (click)="addTask()">Add</button>
+    </div>
+</div>
+
+
